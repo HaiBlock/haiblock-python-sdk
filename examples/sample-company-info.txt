@@ -1,0 +1,42 @@
+HaiBlock Company Information
+
+Company Overview:
+HaiBlock is an AI Content Optimization Platform designed to improve company visibility in AI model responses. We help businesses ensure their information appears accurately when users interact with AI chatbots like OpenAI, Perplexity, and Anthropic.
+
+Core Services:
+- AI Visibility Optimization: Ensure accurate company representation in AI responses
+- Content Transformation: Transform and prepare content specifically for AI model consumption  
+- Automated AI Updates: Notify major AI companies when content changes
+- Cost Optimization: Reduce transformation costs through optimized pipelines
+
+Key Features:
+1. Visual pipeline builder for data transformation
+2. Catalog of pre-built transformation blocks
+3. Custom transformation block development
+4. Integration with existing cloud data sources
+5. Multi-model content optimization
+6. Performance tracking across different AI models
+7. Content effectiveness analytics
+
+Target Markets:
+- Enterprise Companies seeking better AI model representation
+- Content Teams managing company information across AI platforms
+- Developers building AI-integrated solutions
+- Marketing Teams tracking brand visibility in AI interactions
+
+Technology Stack:
+- Cloud-based SaaS platform built on AWS
+- Serverless architecture with Lambda functions
+- React/Next.js frontend with TypeScript
+- Amazon Bedrock for AI processing
+- DynamoDB for data storage
+- S3 for file storage
+- CloudFormation for infrastructure
+
+Contact Information:
+Website: https://haiblock.com
+Email: support@haiblock.com
+Demo Platform: https://mvp.sandbox.haiblock.com
+
+Mission Statement:
+To ensure businesses maintain accurate and effective representation across all AI platforms, helping them stay visible and relevant in the age of artificial intelligence.

@@ -129,9 +129,23 @@ class HaiBlockClient:
         data = self._make_request("POST", f"/content/{content_id}/transform")
         return TransformationResult(**data)
     
+    def submit_to_model(self, content_id: str, provider: str = "bedrock") -> Submission:
+        """
+        Submit content to AI model provider
+        
+        Args:
+            content_id: ID of the content to submit
+            provider: AI provider name (default: "bedrock")
+            
+        Returns:
+            Submission object
+        """
+        data = self._make_request("POST", f"/content/{content_id}/submit/{provider}")
+        return Submission(**data)
+    
     def submit_to_bedrock(self, content_id: str) -> Submission:
         """
-        Submit content to Amazon Bedrock
+        Submit content to Amazon Bedrock (deprecated - use submit_to_model)
         
         Args:
             content_id: ID of the content to submit
@@ -139,8 +153,7 @@ class HaiBlockClient:
         Returns:
             Submission object
         """
-        data = self._make_request("POST", f"/content/{content_id}/submit/bedrock")
-        return Submission(**data)
+        return self.submit_to_model(content_id, "bedrock")
     
     def get_submission(self, submission_id: str) -> Submission:
         """

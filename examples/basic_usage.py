@@ -30,9 +30,9 @@ def main():
         else:
             print(f"❌ Transformation failed: {transformation.error}")
         
-        # Submit to Amazon Bedrock
-        print("\nSubmitting to Amazon Bedrock...")
-        submission = client.submit_to_bedrock(content.id)
+        # Submit to AI model provider
+        print("\nSubmitting to AI model provider...")
+        submission = client.submit_to_model(content.id, "bedrock")
         print(f"✅ Submitted to Bedrock! Submission ID: {submission.id}")
         print(f"Status: {submission.status}")
         

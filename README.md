@@ -38,7 +38,7 @@ content = client.upload_file("company-info.txt")
 transformed = client.transform_content(content.id)
 
 # Submit to AI providers
-submission = client.submit_to_bedrock(content.id)
+submission = client.submit_to_model(content.id, "bedrock")
 
 # Get analytics
 analytics = client.get_analytics()
@@ -70,7 +70,7 @@ Main client class for interacting with the HaiBlock API.
 
 - `upload_file(file_path)` - Upload a file for processing
 - `transform_content(content_id)` - Transform content for AI consumption
-- `submit_to_bedrock(content_id)` - Submit content to Amazon Bedrock
+- `submit_to_model(content_id, provider)` - Submit content to AI model provider
 - `get_analytics()` - Retrieve analytics data
 - `list_content()` - List all uploaded content
 

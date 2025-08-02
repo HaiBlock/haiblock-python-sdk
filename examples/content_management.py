@@ -70,7 +70,7 @@ def main():
         submissions = []
         for content in uploaded_content:
             try:
-                submission = client.submit_to_bedrock(content.id)
+                submission = client.submit_to_model(content.id, "bedrock")
                 submissions.append(submission)
                 print(f"  ✅ {content.filename} submitted to Bedrock - ID: {submission.id}")
             except Exception as e:

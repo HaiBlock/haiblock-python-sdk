@@ -133,8 +133,28 @@ class TestHaiBlockClient:
             self.client.get_analytics()
     
     @requests_mock.Mocker()
-    def test_submit_to_bedrock_success(self, m):
-        """Test successful Bedrock submission"""
+    def test_submit_to_model_success(self, m):
+        """Test successful model submission"""
+        content_id = "test-content-id"
+        mock_response = {
+            "id": "submission-123",
+            "content_id": content_id,
+            "provider": "bedrock",
+            "status": "pending",
+            "submitted_at": "2025-01-01T00:00:00Z"
+        }
+        
+        m.post(f"https://api.test.haiblock.com/content/{content_id}/submit/bedrock", json=mock_response)
+        
+        submission = self.client.submit_to_model(content_id, "bedrock")
+        
+        assert isinstance(submission, Submission)
+        assert submission.provider == "bedrock"
+        assert submission.status == "pending"
+    
+    @requests_mock.Mocker()
+    def test_submit_to_bedrock_backwards_compatibility(self, m):
+        """Test backwards compatibility for submit_to_bedrock"""
         content_id = "test-content-id"
         mock_response = {
             "id": "submission-123",

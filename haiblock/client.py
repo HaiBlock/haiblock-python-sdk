@@ -19,7 +19,7 @@ class HaiBlockClient:
         Initialize HaiBlock client
         
         Args:
-            api_url: Base URL for HaiBlock API
+            api_url: Base URL for the HaiBlock API
             auth_token: Authentication token
         """
         self.api_url = api_url or os.getenv("HAIBLOCK_API_URL", "https://api.haiblock.com")

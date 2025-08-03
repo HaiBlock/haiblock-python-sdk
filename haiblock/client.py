@@ -11,7 +11,7 @@ from .exceptions import HaiBlockError, AuthenticationError, APIError, ContentNot
 
 class HaiBlockClient:
     """
-    Main client for interacting with HaiBlock API
+    Main client for interacting with the HaiBlock API
     """
     
     def __init__(self, api_url: str = None, auth_token: str = None):
